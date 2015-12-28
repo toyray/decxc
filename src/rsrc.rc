@@ -1,0 +1,18 @@
+#include "\masm32\include\resource.h"
+
+#define IDI_APP                         200
+#define IDC_DECRYPT	                1001
+#define IDC_ENCRYPT                     1002
+#define IDC_STATIC                      -1
+
+DLGBOX DIALOG 0, 0, 192, 42
+STYLE DS_MODALFRAME | 0x804L | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "decxc for ChronX 3.52"
+FONT 9, "Arial"
+{
+ PUSHBUTTON "&Decrypt !", IDC_DECRYPT, 137, 4, 50, 14
+ PUSHBUTTON "&Encrypt !", IDC_ENCRYPT, 137, 24, 50, 14
+ LTEXT "Click on Decrypt! to convert any CXC file to a CCC file. After modifying the CCC file, click on Encrypt! to convert it back to a usable CXC file.", -1, 5, 3, 125, 42
+}
+
+IDI_APP                 ICON    DISCARDABLE     "hello.ico"
